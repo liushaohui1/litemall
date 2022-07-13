@@ -6,6 +6,7 @@ import org.linlinjava.litemall.db.service.LitemallStorageService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.Resource;
 
+import java.io.IOException;
 import java.io.InputStream;
 import java.nio.file.Path;
 import java.util.stream.Stream;
@@ -43,7 +44,7 @@ public class StorageService {
      * @param contentType   文件类型
      * @param fileName      文件索引名
      */
-    public LitemallStorage store(InputStream inputStream, long contentLength, String contentType, String fileName) {
+    public LitemallStorage store(InputStream inputStream, long contentLength, String contentType, String fileName) throws IOException {
         String key = generateKey(fileName);
         storage.store(inputStream, contentLength, contentType, key);
 

@@ -9,11 +9,11 @@ server:
 
 logging:
   level:
-    root:  ERROR
-    org.springframework:  ERROR
+    root:  info
+    org.springframework:  info
     org.mybatis:  ERROR
-    org.linlinjava.litemall.admin:  DEBUG
-    org.linlinjava.litemall:  ERROR
+    org.linlinjava.litemall.admin:  info
+    org.linlinjava.litemall:  info
 
 swagger:
   production: false

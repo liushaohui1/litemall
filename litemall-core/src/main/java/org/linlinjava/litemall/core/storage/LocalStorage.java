@@ -52,11 +52,15 @@ public class LocalStorage implements Storage {
     }
 
     @Override
-    public void store(InputStream inputStream, long contentLength, String contentType, String keyName) {
+    public void store(InputStream inputStream, long contentLength, String contentType, String keyName) throws IOException {
         try {
             Files.copy(inputStream, rootLocation.resolve(keyName), StandardCopyOption.REPLACE_EXISTING);
         } catch (IOException e) {
             throw new RuntimeException("Failed to store file " + keyName, e);
+        }finally {
+            if(inputStream !=null){
+                inputStream.close();
+            }
         }
     }
 

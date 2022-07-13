@@ -361,6 +361,7 @@ CREATE TABLE `litemall_goods` (
   `add_time` datetime DEFAULT NULL COMMENT '创建时间',
   `update_time` datetime DEFAULT NULL COMMENT '更新时间',
   `deleted` tinyint(1) DEFAULT '0' COMMENT '逻辑删除',
+  `multiple_spec`  tinyint(1) DEFAULT '0' COMMENT '默认单规格 0单规格 1多规格',
   PRIMARY KEY (`id`),
   KEY `goods_sn` (`goods_sn`),
   KEY `cat_id` (`category_id`),

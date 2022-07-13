@@ -6,9 +6,13 @@ import org.linlinjava.litemall.db.domain.LitemallGoodsProduct;
 import org.linlinjava.litemall.db.domain.LitemallGoodsSpecification;
 
 public class GoodsAllinone {
+    //商品基本信息表
     LitemallGoods goods;
+    //商品规格表
     LitemallGoodsSpecification[] specifications;
+    //商品参数表
     LitemallGoodsAttribute[] attributes;
+    //商品货品表
     LitemallGoodsProduct[] products;
 
     public LitemallGoods getGoods() {

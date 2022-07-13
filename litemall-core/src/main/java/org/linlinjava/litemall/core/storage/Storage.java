@@ -2,6 +2,7 @@ package org.linlinjava.litemall.core.storage;
 
 import org.springframework.core.io.Resource;
 
+import java.io.IOException;
 import java.io.InputStream;
 import java.nio.file.Path;
 import java.util.stream.Stream;
@@ -19,7 +20,7 @@ public interface Storage {
      * @param contentType   文件类型
      * @param keyName       文件名
      */
-    void store(InputStream inputStream, long contentLength, String contentType, String keyName);
+    void store(InputStream inputStream, long contentLength, String contentType, String keyName) throws IOException;
 
     Stream<Path> loadAll();
 
